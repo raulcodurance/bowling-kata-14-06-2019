@@ -55,7 +55,6 @@ public class BowlingGameShould {
         assertEquals(2, game.score());
     }
 
-    @Ignore
     @Test
     public void rolls_a_spare() {
 
