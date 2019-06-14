@@ -51,6 +51,6 @@ public class BowlingGameShould {
             game.roll(0);
         }
 
-        assertEquals(0, game.score());
+        assertEquals(2, game.score());
     }
 }
