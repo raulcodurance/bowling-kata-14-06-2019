@@ -1,4 +1,5 @@
 public class Game {
+    private static final int FRAMES_IN_GAME = 10;
     private int[] rolls = new int[21];
     private int indexRoll = 0;
 
@@ -13,7 +14,7 @@ public class Game {
         int score = 0;
         int firstInFrame = 0;
 
-        for (int i = 0; i < 10; i++) { // frames
+        for (int currentFrame = 0; currentFrame < FRAMES_IN_GAME; currentFrame++) {
 
             if (rolls[firstInFrame] == 10) {
 
