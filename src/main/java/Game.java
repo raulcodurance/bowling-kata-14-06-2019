@@ -22,9 +22,7 @@ public class Game {
 
                 firstInFrame += 1;
 
-            }
-
-            if (rolls[firstInFrame] + rolls[firstInFrame + 1] == 10) {
+            } else if (rolls[firstInFrame] + rolls[firstInFrame + 1] == 10) {
 
                 score += 10 + rolls[firstInFrame + 2];
 

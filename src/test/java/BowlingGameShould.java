@@ -58,6 +58,15 @@ public class BowlingGameShould {
 
         assertEquals(20, game.score());
     }
+    @Test
+    public void play_perfect_game() {
+
+        rollMany(21, 10);
+
+        assertEquals(300, game.score());
+    }
+
+
 
 
     private void rollMany(int rolls, int pins) {
