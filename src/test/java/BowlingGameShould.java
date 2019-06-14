@@ -1,4 +1,3 @@
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -30,7 +29,7 @@ public class BowlingGameShould {
 
         Game game = new Game();
 
-        for(int i = 0; i<20;i++){
+        for (int i = 0; i < 20; i++) {
 
             game.roll(0);
         }
@@ -47,7 +46,7 @@ public class BowlingGameShould {
         game.roll(1);
         game.roll(1);
 
-        for(int i = 0; i<18;i++){
+        for (int i = 0; i < 18; i++) {
 
             game.roll(0);
         }
@@ -65,7 +64,7 @@ public class BowlingGameShould {
         game.roll(3);
         game.roll(2);
 
-        for(int i = 0; i<16;i++){
+        for (int i = 0; i < 16; i++) {
 
             game.roll(0);
         }
