@@ -1,3 +1,4 @@
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -52,5 +53,24 @@ public class BowlingGameShould {
         }
 
         assertEquals(2, game.score());
+    }
+
+    @Ignore
+    @Test
+    public void rolls_a_spare() {
+
+        Game game = new Game();
+
+        game.roll(5);
+        game.roll(5); //spare
+        game.roll(3);
+        game.roll(2);
+
+        for(int i = 0; i<16;i++){
+
+            game.roll(0);
+        }
+
+        assertEquals(18, game.score());
     }
 }
