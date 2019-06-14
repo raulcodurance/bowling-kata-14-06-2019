@@ -15,6 +15,14 @@ public class Game {
 
         for (int i = 0; i < 10; i++) { // frames
 
+            if (rolls[firstInFrame] == 10) {
+
+                score += 10 + rolls[firstInFrame + 1] + rolls[firstInFrame + 2];
+
+                firstInFrame += 1;
+
+            }
+
             if (rolls[firstInFrame] + rolls[firstInFrame + 1] == 10) {
 
                 score += 10 + rolls[firstInFrame + 2];

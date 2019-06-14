@@ -53,4 +53,19 @@ public class BowlingGameShould {
 
         assertEquals(18, game.score());
     }
+
+    @Test
+    public void rolls_a_strike() {
+
+        game.roll(10); // Strike
+        game.roll(3);
+        game.roll(2);
+
+        for (int i = 0; i < 16; i++) {
+
+            game.roll(0);
+        }
+
+        assertEquals(20, game.score());
+    }
 }
