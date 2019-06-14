@@ -37,5 +37,20 @@ public class BowlingGameShould {
         assertEquals(0, game.score());
     }
 
+    @Test
+    public void play_only_ones() {
 
+
+        Game game = new Game();
+
+        game.roll(1);
+        game.roll(1);
+
+        for(int i = 0; i<18;i++){
+
+            game.roll(0);
+        }
+
+        assertEquals(0, game.score());
+    }
 }
