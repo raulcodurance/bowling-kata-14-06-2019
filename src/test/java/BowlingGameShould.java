@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -5,29 +6,15 @@ import static org.junit.Assert.assertEquals;
 public class BowlingGameShould {
 
 
-    @Test
-    public void roll() {
+    private Game game;
 
-
-        Game game = new Game();
-
-        game.roll(0);
+    @Before
+    public void setUp() throws Exception {
+        game = new Game();
     }
-
-
-    @Test
-    public void score() {
-
-        Game game = new Game();
-
-        game.score();
-    }
-
 
     @Test
     public void play_gutter_game() {
-
-        Game game = new Game();
 
         for (int i = 0; i < 20; i++) {
 
@@ -39,9 +26,6 @@ public class BowlingGameShould {
 
     @Test
     public void play_only_ones() {
-
-
-        Game game = new Game();
 
         game.roll(1);
         game.roll(1);
@@ -56,8 +40,6 @@ public class BowlingGameShould {
 
     @Test
     public void rolls_a_spare() {
-
-        Game game = new Game();
 
         game.roll(5);
         game.roll(5); //spare
